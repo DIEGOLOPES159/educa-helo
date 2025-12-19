@@ -361,6 +361,16 @@ input, select, textarea {
 			align-items: flex-start;
 		}
 
+		.align-text {
+	display: flex;
+	align-items: flex-start;
+}
+
+.text-align-fix p {
+	margin-bottom: 0;
+}
+
+
 		.row.aln-middle {
 			align-items: center;
 		}
@@ -2360,12 +2370,12 @@ input, select, textarea {
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 4em 0;
 			width: 100%;
 		}
 
 			.image.fit img {
-				width: 100%;
+				width: 110%;
 				height: auto;
 			}
 
