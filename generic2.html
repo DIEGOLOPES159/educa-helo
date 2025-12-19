@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Educa Helo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="images/livro3.jpg">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<head>
+    <meta charset="utf-8">
+
+    <style>
+        /* Restaurar aparência original dos botões radio */
+        input[type="radio"] {
+            appearance: radio !important;
+            -webkit-appearance: radio !important;
+            -moz-appearance: radio !important;
+
+            width: 16px !important;
+            height: 16px !important;
+            transform: scale(1) !important;
+            margin-right: 6px !important;	
+        }
+
+		
+		
+		.radio-group {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-left: 20px;
+		}
+
+		.radio {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			gap: 8px;
+		}
+
+		/* Esconde o radio original */
+		.radio input[type="radio"] {
+			display: none;
+		}
+
+		/* Círculo personalizado */
+		.radio span {
+			width: 18px;
+			height: 18px;
+			border: 2px solid #333;
+			border-radius: 50%;
+			display: inline-block;
+			position: relative;
+		}
+
+		/* Pontinho interno quando selecionado */
+		.radio input[type="radio"]:checked + span::after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background: #333;
+			border-radius: 50%;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+		}
+		
+button:disabled {
+    color: gray;       /* cor do texto quando desativado */
+    background-color: #e0e0e0; /* opcional, cor do fundo */
+    cursor: not-allowed; /* cursor mostrando que está bloqueado */
+    border-color: #bfbfbf; /* borda mais clara */
+}
+
+    </style>
+
+</head>
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<div class="logo">
+								<span class="symbol">
+									<img src="images/livro3.jpg" alt="">
+								</span>
+								<span class="title">Educa Helo</span>	
+							</div>
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Estudos</a></li>
+							<li><a href="generic.html">Exercicios</a></li>
+							<li><a href="generic2.html">Revisão</a></li>
+							<li><a href="elements.html">Preços</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 style="text-align: center;">Revisão</h1>
+							<span class="image main">
+    							<img src="images/img3.jpg" alt=""/>
+							</span>
+									
+								
+		
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Nos conte o quanto voce ja aprendeu	</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										
+										<div class="field">
+											<textarea name="Envie uma mensagem" id="Envie uma mensagem" placeholder="Envie uma mensagem"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Enviar" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+							
+							
+						</div>
+					</footer>
+
+			</div>
+
+            
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

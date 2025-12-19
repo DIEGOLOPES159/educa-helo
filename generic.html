@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Educa Helo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/png" href="images/livro3.jpg">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		
+
+		<head>
+    <meta charset="utf-8">
+
+    <style>
+        /* Restaurar aparência original dos botões radio */
+        input[type="radio"] {
+            appearance: radio !important;
+            -webkit-appearance: radio !important;
+            -moz-appearance: radio !important;
+
+            width: 16px !important;
+            height: 16px !important;
+            transform: scale(1) !important;
+            margin-right: 6px !important;	
+        }
+
+		
+		
+		.radio-group {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-left: 20px;
+		}
+
+		.radio {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			gap: 8px;
+		}
+
+		/* Esconde o radio original */
+		.radio input[type="radio"] {
+			display: none;
+		}
+
+		/* Círculo personalizado */
+		.radio span {
+			width: 18px;
+			height: 18px;
+			border: 2px solid #333;
+			border-radius: 50%;
+			display: inline-block;
+			position: relative;
+		}
+
+		/* Pontinho interno quando selecionado */
+		.radio input[type="radio"]:checked + span::after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background: #333;
+			border-radius: 50%;
+			position: absolute;
+			top: 3px;
+			left: 3px;
+		}
+		
+		
+button:disabled {
+    color: gray;       /* cor do texto quando desativado */
+    background-color: #e0e0e0; /* opcional, cor do fundo */
+    cursor: not-allowed; /* cursor mostrando que está bloqueado */
+    border-color: #bfbfbf; /* borda mais clara */
+}
+
+    </style>
+
+</head>
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<div class="logo">
+								<span class="symbol">
+									<img src="images/livro3.jpg" alt="">
+								</span>
+								<span class="logo-title">
+									Educa Helo
+								</span>	
+							</div>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Estudos</a></li>
+							<li><a href="generic.html">Exercicios</a></li>
+							<li><a href="generic2.html">Revisão</a></li>
+							<li><a href="elements.html">Preços</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1 class="titulo-exercicios">Faça seus exercícios aqui</h1>
+ 							<span class="image main">
+								<img src="images/img2.png" alt="">
+							</span>
+
+									
+								<p style="size: 15px; color: black; font-family:Verdana, Geneva, Tahoma, sans-serif;"> 1- Complete as frases:</p>
+								<p style="color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: medium;">1- It was very cold today, I need a ......</p>
+
+							<div class="radio-group" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+								<label class="radio">
+									<input type="radio" name="lista" value="friend">
+									<span></span> friend
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista" value="shoe">
+									<span></span> shoe
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista" value="glass">
+									<span></span> glass
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista" value="coat">
+									<span></span> coat
+								</label>
+
+							</div>
+							
+							<button onclick="verResposta()" 
+							style=" width: 90px; padding: 3px 5px; font-size: 10px; font-family:cursive; border-radius: 4px; margin-top: 50px;">
+								Enviar
+							</button>
+
+							<p id="resultado" style="font-weight:bold; color:#f2849e; margin-top:20px;"></p>
+
+							<script>
+							function verResposta() {
+
+								let escolha = document.querySelector('input[name="lista"]:checked');
+
+								if (!escolha) {
+									document.getElementById("resultado").innerText = "Você não selecionou nenhuma opção.";
+									document.getElementById("resultado").style.color = "red";	
+									return;                                    
+								}
+
+								const correta = "coat";
+
+								if (escolha.value === correta) {
+									totalAcertos++;
+									document.getElementById("resultado").innerText = "Resposta certa!";
+									document.getElementById("resultado").style.color = "green";
+									
+								} else {
+									document.getElementById("resultado").innerText = "Resposta errada.";
+									document.getElementById("resultado").style.color = "red";
+									
+								}
+
+								// DESATIVA O BOTÃO DEPOIS DE CLICAR
+								document.querySelector('button').disabled = true;
+
+								marcarRespondida();
+								
+							}
+							</script>
+		
+							
+								<p style="color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: medium;">2- When I go to the circus, I get scared of the ......</p>
+
+							<div class="radio-group" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+
+								<label class="radio">
+									<input type="radio" name="lista1" value="clown">
+									<span></span> clown
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista1" value="dog">
+									<span></span> dog
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista1" value="tiger">
+									<span></span> tiger
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista1" value="cat">
+									<span></span> cat
+								</label>
+									
+							</div>
+
+							<button id="btn1" onclick="verResposta1()" 
+							style=" width: 90px; padding: 3px 5px; font-size: 10px; font-family:cursive; border-radius: 4px; margin-top: 50px;">
+								Enviar
+							</button>
+
+							<p id="resultado1" style="font-weight:bold; color:#f2849e; margin-top:20px;"></p>
+
+							<script>
+							function verResposta1() {
+
+								let escolha = document.querySelector('input[name="lista1"]:checked');
+
+								if (!escolha) {
+									document.getElementById("resultado1").innerText = "Você não selecionou nenhuma opção.";
+									document.getElementById("resultado1").style.color = "red";
+									return;                                    
+								}
+
+								const correta = "clown";
+
+								if (escolha.value === correta) {
+									totalAcertos++;
+									document.getElementById("resultado1").innerText = "Resposta certa!";
+									document.getElementById("resultado1").style.color = "green";
+								} else {
+									document.getElementById("resultado1").innerText = "Resposta errada.";
+									document.getElementById("resultado1").style.color = "red";
+								}
+
+								// DESATIVA O BOTÃO DEPOIS DE CLICAR
+								document.getElementById("btn1").disabled = true;
+
+								marcarRespondida();
+								
+							}
+							</script>
+
+						<p style="color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: medium;">3- I went to a party a while ago and met a girl, and now she's my ....</p>
+
+							<div class="radio-group" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+								<label class="radio">
+									<input type="radio" name="lista2" value="friend">
+									<span></span> friend
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista2" value="girlfriend">
+									<span></span> girlfriend
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista2" value="girl">
+									<span></span> girl
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista2" value="wife">
+									<span></span> wife
+								</label>
+									
+							</div>	
+
+							<button id="btn2" onclick="verResposta2()" 
+							style=" width: 90px; padding: 3px 5px; font-size: 10px; font-family:cursive; border-radius: 4px; margin-top: 50px;">
+								Enviar
+							</button>
+
+							<p id="resultado2" style="font-weight:bold; color:#f2849e; margin-top:20px;"></p>
+
+							<script>
+							function verResposta2() {
+
+								let escolha = document.querySelector('input[name="lista2"]:checked');
+
+								if (!escolha) {
+									document.getElementById("resultado2").innerText = "Você não selecionou nenhuma opção.";
+									document.getElementById("resultado2").style.color = "red";
+									return;                                    
+								}
+
+								const correta = "girlfriend";
+
+								if (escolha.value === correta) {
+									totalAcertos++;
+									document.getElementById("resultado2").innerText = "Resposta certa!";
+									document.getElementById("resultado2").style.color = "green";
+								} else {
+									document.getElementById("resultado2").innerText = "Resposta errada.";
+									document.getElementById("resultado2").style.color = "red";
+								}
+
+								// DESATIVA O BOTÃO DEPOIS DE CLICAR
+								document.getElementById("btn2").disabled = true;
+
+								marcarRespondida();
+								
+							}
+							</script>
+							
+							<p style="color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: medium;">4- I played soccer last night and now I'm very....</p>
+
+							<div class="radio-group" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+								<label class="radio">
+									<input type="radio" name="lista3" value="tired">
+									<span></span> tired
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista3" value="happy">
+									<span></span> happy
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista3" value="scared">
+									<span></span> scared
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista3" value="sad">
+									<span></span> sad
+								</label>
+									
+							</div>	
+
+							<button id="btn3" onclick="verResposta3()" 
+							style=" width: 90px; padding: 3px 5px; font-size: 10px; font-family:cursive; border-radius: 4px; margin-top: 50px;">
+								Enviar
+							</button>
+
+							<p id="resultado3" style="font-weight:bold; color:#f2849e; margin-top:20px;"></p>
+
+							<script>
+							function verResposta3() {
+
+								let escolha = document.querySelector('input[name="lista3"]:checked');
+
+								if (!escolha) {
+									document.getElementById("resultado3").innerText = "Você não selecionou nenhuma opção.";
+									document.getElementById("resultado3").style.color = "red";
+									return;                                    
+								}
+
+								const correta = "tired";
+
+								if (escolha.value === correta) {
+									totalAcertos++;
+									document.getElementById("resultado3").innerText = "Resposta certa!";
+									document.getElementById("resultado3").style.color = "green";
+								} else {
+									document.getElementById("resultado3").innerText = "Resposta errada.";
+									document.getElementById("resultado3").style.color = "red";
+								}
+
+								// DESATIVA O BOTÃO DEPOIS DE CLICAR
+								document.getElementById("btn3").disabled = true;
+
+								marcarRespondida();
+								
+							}
+							</script>
+
+							<p style="color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: medium;">5- My girlfriend doesn't like to take a shower, she only showers ....</p>
+
+							<div class="radio-group" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+
+								<label class="radio">
+									<input type="radio" name="lista4" value="once a year">
+									<span></span> once a year
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista4" value="wednesday">
+									<span></span> wednesday
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista4" value="saturday">
+									<span></span> saturday
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="lista4" value="august">
+									<span></span> august
+								</label>
+									
+							</div>	
+
+							<button id="btn4" onclick="verResposta4()" 
+							style=" width: 90px; padding: 3px 5px; font-size: 10px; font-family:cursive; border-radius: 4px; margin-top: 50px;">
+								Enviar
+							</button>
+
+							<p id="resultado4" style="font-weight:bold; color:#f2849e; margin-top:20px;"></p>
+
+							<script>
+							function verResposta4() {
+
+								let escolha = document.querySelector('input[name="lista4"]:checked');
+
+								if (!escolha) {
+									document.getElementById("resultado4").innerText = "Você não selecionou nenhuma opção.";
+									document.getElementById("resultado4").style.color = "red";
+									return;                                    
+								}
+
+								const correta = "saturday";
+
+								if (escolha.value === correta) {
+									totalAcertos++;
+									document.getElementById("resultado4").innerText = "Resposta certa!";
+									document.getElementById("resultado4").style.color = "green";
+								} else {
+									document.getElementById("resultado4").innerText = "Resposta errada.";
+									document.getElementById("resultado4").style.color = "red";
+								}
+
+								// DESATIVA O BOTÃO DEPOIS DE CLICAR
+								document.getElementById("btn4").disabled = true;
+
+								marcarRespondida();
+								
+							}
+							</script>
+
+							<p id="final" style="font-size:20px; font-weight:bold; margin-top:40px;"></p>
+
+							<button id="btnFinalizar" onclick="mostrarTotal()" disabled
+								style="margin-top:20px; font-size:10px; padding:2px 10px;">
+								Finalizar
+							</button>
+
+							<script>
+						function mostrarTotal() {
+							document.getElementById("final").innerText = totalAcertos + "/5";
+						}
+
+						
+						
+						   </script>
+
+						<script>
+						let totalAcertos = 0;
+						let respostasRespondidas = 0;
+
+						function marcarRespondida() {
+							respostasRespondidas++;
+
+							if (respostasRespondidas === 5) { 
+								document.getElementById("btnFinalizar").disabled = false;
+							}
+						}
+						</script>
+
+							<script>
+							function mostrarTotal() {
+
+							let final = document.getElementById("final");
+
+							if (totalAcertos >= 3) {
+								final.innerText = "Parabéns! Você acertou " + totalAcertos + " questões!";
+								final.style.color = "green";
+
+								// 🌟 FOGOS CONTÍNUOS DOS DOIS LADOS 🌟
+								var duration = 6 * 1000;
+								var animationEnd = Date.now() + duration;
+								var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10 };
+
+								function randomInRange(min, max) {
+									return Math.random() * (max - min) + min;
+								}
+
+								var interval = setInterval(function() {
+									var timeLeft = animationEnd - Date.now();
+
+									if (timeLeft <= 0) {
+										return clearInterval(interval);
+									}
+
+									var particleCount = 150 * (timeLeft / duration);
+
+									// fogos da esquerda
+									confetti({
+										...defaults,
+										particleCount,
+										origin: {
+											x: randomInRange(0.1, 0.3),
+											y: Math.random() - 0.2
+										}
+									});
+
+									// fogos da direita
+									confetti({
+										...defaults,
+										particleCount,
+										origin: {
+											x: randomInRange(0.7, 0.9),
+											y: Math.random() - 0.2
+										}
+									});
+								}, 250);
+
+							} else {
+								final.innerText = "Você acertou " + totalAcertos + " questões.";
+								final.style.color = "red";
+							}
+						}
+
+							</script>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Cadastre-se e faça parte	</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<input type="text" name="Nome" id="Nome" placeholder="Nome" />
+										</div>
+										<div class="field half">
+											<input type="email" name="email" id="email" placeholder="Email" />
+										</div>
+										<div class="field">
+											<textarea name="Envie uma mensagem" id="Envie uma mensagem" placeholder="Envie uma mensagem"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Enviar" class="primary" /></li>
+									</ul>
+								</form>
+							</section>
+
+							<section>
+								<h2>Siga a gente</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/_diegolopessz/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</section>
+							
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+			
+
+
+	</body>
+</html>
